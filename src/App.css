@@ -1,8 +1,91 @@
 .App {
-  text-align: center;
+  /* text-align: center; */
+  color: white;
+  max-width: 500px;
+  margin: 0 auto;
 }
 .Header {
-  color: #443e3e;
-  text-shadow: 1px 1px 5px #fff;
+  text-align: center;
+  color: rgb(237, 215, 149);
+  text-transform: uppercase;
+  font-size: 4rem;
+  font-weight: 900;
+  letter-spacing: -0.3rem;
 }
-/* write your parent styles in here for your App.js */
+
+.accordeon {
+  background-image: linear-gradient(to right, rgba(0, 16, 162, 0.542), rgba(255,0,0,1));
+  margin: 20px;
+  border: 1px solid aliceblue;
+  border-radius: 3px;
+
+  max-height: 3rem;
+  overflow: hidden;
+
+  transition: max-height 0.5s ease-in-out;
+}
+
+.accordeon.open {
+  max-height: 400px;
+  overflow-y: scroll;
+}
+
+.search-input {
+  padding: 10px;
+  width: 100%;
+  border: 2px solid #ddd;
+  border-radius: 5px;
+  font-size: 16px;
+}
+
+.search-input::placeholder {
+  color: rgb(17, 0, 171)
+}
+
+.search-input:focus {
+  outline: none;
+  border-color: rgb(17, 0, 171);
+  box-shadow: 0 0 10px rgba(255,0,0,1)
+}
+
+.acc-title {
+  height: 3rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 1.5rem;
+  cursor: pointer;
+  color: aliceblue;
+}
+
+.title {
+  color: aliceblue;
+  text-transform: uppercase;
+  font-size: 1rem;
+  font-weight: 100;
+  letter-spacing: 0.1rem;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  margin-left: 2rem;
+  padding-top: 1rem;
+}
+
+li {
+  padding: 0.3rem 0;
+}
+
+.arrow {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 3rem;
+  height: 3rem;
+}
+
+.accordeon .arrow {
+  rotate: 270deg;
+}
